@@ -71,7 +71,12 @@ class Geodigs_User {
 	}
 	
 	public static function update_user_info($data) {
-		$_SESSION['gd_user'] = (object) array_merge((array) $_SESSION['gd_user'], (array) $data);
+		if ($_SESSION['gd_user'] = (object) array_merge((array) $_SESSION['gd_user'], (array) $data)) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 	/**
