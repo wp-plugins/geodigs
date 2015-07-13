@@ -1,0 +1,515 @@
+/* Elastic Carousel */
+/* .es-carousel ul {
+	width: auto !important;
+}
+.es-nav {
+	display: none;
+} */
+
+form {
+	display: inline;
+}
+
+fieldset {
+	border: none;
+}
+
+#gd table {
+	width: 100%;
+}
+
+.gd-calendar {
+	width: 100%;
+	height: 1000px;
+}
+
+.gd-error {
+	color: red;
+}
+
+.gd-float-right {
+	float: right;
+}
+
+.gd-accordian {
+	display: block;
+	position: relative;
+}
+
+.gd-accordian-title {
+	cursor: pointer;
+}
+
+.gd-accordian-content {
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	
+	-webkit-transition: max-height 0.2s ease, opacity 0.2s ease;
+    -moz-transition: max-height 0.2s ease, opacity 0.2s ease;
+    -o-transition: max-height 0.2s ease, opacity 0.2s ease;
+    transition: max-height 0.2s ease, opacity 0.2s ease;
+}
+.gd-accordian-show .gd-accordian-content {
+	max-height: 999px;
+	opacity: 1;
+}
+
+/* Forms */
+.gd-form-full input[type="text"],
+.gd-form-full input[type="password"],
+.gd-form-full input[type="button"],
+.gd-form-full input[type="submit"],
+.gd-form-full textarea,
+.gd-form-full select {
+	width: 100%;
+	display: block;
+}
+
+#gd-disclaimers {
+	display: block;
+	margin-top: 20px;
+	text-align: left;
+	font-size: .75em;
+}
+
+.gd-disclaimer img {
+	width: 24px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/********************************************************************
+* PAGE: LISTING ALERTS
+********************************************************************/
+.gd-listing-alert {
+	padding: 10px;
+}
+.gd-listing-alert-name {
+	margin-top: 0;
+	margin: 0 5px 0 0;
+}
+.gd-listing-alert-details ul {
+	list-style: none;
+	display: inline-block;
+}
+
+.gd-listing-alert-tools {
+	float: right;
+	clear: both;
+}
+
+/********************************************************************
+* PAGE: LISTING DETAIL
+********************************************************************/
+#gd-map {
+	width: 100%;
+	height: 400px;
+}
+#gd-map iframe {
+	width: 100%;
+	height: 100%;
+}
+
+/* Actions */
+.gd-calculator-icon,
+.gd-email-icon,
+.gd-map-pin-icon,
+.gd-search-icon {
+	width: 30px;
+	height: 30px;
+	padding: 3px;
+}
+
+.gd-links-button div {
+	position: relative;
+	line-height: 30px;
+	vertical-align: top;
+}
+.gd-links-button div span {
+	position: absolute;
+	padding-left: 5px;
+}
+
+/********************************************************************
+* FAVORITE TOGGLE
+********************************************************************/
+.gd-favorite-toggle {
+	cursor: pointer;
+	position: relative;
+	text-align: left;
+	height: 30px;
+}
+.gd-favorite-star {
+	height: 30px;
+	width: 30px;
+}
+.gd-favorite-star-border,
+.gd-favorite-toggle-on .gd-favorite-star-inner {
+	fill: #FFD700;
+}
+.gd-favorite-star-inner {
+	fill: #fff;
+	
+	-webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.gd-favorite-add-text,
+.gd-favorite-remove-text {
+	position: absolute;
+	padding-left: 5px;
+	
+	-webkit-transition: opacity 0.2s ease, top 0.2s ease;
+    -moz-transition: opacity 0.2s ease, top 0.2s ease;
+    -o-transition: opacity 0.2s ease, top 0.2s ease;
+    transition: opacity 0.2s ease, top 0.2s ease;
+}
+
+.gd-favorite-remove-text,
+.gd-favorite-toggle-on .gd-favorite-add-text {
+	opacity: 0;
+	top: -10px;
+}
+
+.gd-favorite-toggle-on .gd-favorite-remove-text {
+	opacity: 1;
+	top: 0;
+}
+
+.gd-favorite-add-text,
+.gd-favorite-remove-text {
+	line-height: 30px;
+	vertical-align: top;
+}
+/********************************************************************
+* WIDGET: QUICK SEARCH
+********************************************************************/
+.gd-quick-search input:focus,
+.gd-quick-search select:focus{
+    outline: none;
+}
+
+.gd-quick-search-input{
+	display: block;
+	position: relative;
+	width: 100%;
+	background: no-repeat #fff;
+	min-height: 46px;
+	border-radius: 3px;
+}
+	
+.gd-quick-search-input input{
+	display: inline-block;
+	min-height: 46px;
+	width: 100%;
+	color: #bfbfbf;
+}
+
+/* ===== autocomplete styles === */
+.gd-quick-search-throbber {
+	height: 100%;
+	width: 10%;
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 0;
+}
+
+.gd-quick-search-throbber .gd-quick-search-throbber-helper {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.gd-quick-search-throbber img{
+	max-height: 46px;
+	vertical-align: middle;
+}
+
+.ui-state-focus {
+	background: #eee;
+}
+
+.ui-menu-item {
+	cursor: pointer;
+	padding-left: 10px;
+}
+
+.ui-menu-item-hover {
+	background: #eee;
+}
+	
+.ui-autocomplete {
+	/*border-radius: 5px; */
+	background: #fff;
+	list-style: none;
+	padding-left: 0;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	z-index: 10000;
+}
+	
+/* ===== end autocomplete styles === */
+
+
+/********************************************************************
+* PAGE: LISTING RESULTS
+********************************************************************/
+
+.gd-media {
+	position: relative;
+}
+
+.gd-results .gd-photo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid #ededed;
+	max-height: 188px;
+	overflow: hidden;
+}
+.gd-results .gd-photo img {
+	width: 250px;
+	padding: 0;
+}
+
+.gd-listing:before {
+	content: "";
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+}
+.gd-listing {
+	overflow: hidden;
+	position: relative;
+	min-height: 188px;
+}
+
+.gd-listing-media,
+.gd-listing-info {
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+}
+
+.gd-listing-media {
+	width: 300px;
+}
+.gd-listing-info {
+}
+
+.gd-listing-info span {
+	display: block;
+}
+
+.gd-listing-address,
+.gd-listing-price {
+	font-weight: bold;
+}
+
+.gd-mls-number {
+	float: right;
+	padding: 5px 20px;
+}
+
+/* Header */
+#gd-listings-header {
+	position: relative;
+}
+
+#gd-listings-toolbar {
+	display: inline-block;
+}
+
+#gd-listings-sort select {
+	width: auto;
+}
+/* End Header */
+
+/* Footer */
+#gd-listings-footer {
+	text-align: right;
+}
+
+#gd-pagination {
+	display: inline-block;
+}
+#gd-pagination a,
+#gd-pagination span {
+	margin: 2px;
+}
+/* End Footer */
+
+/* Layouts */
+#gd-listings-columns-2::after {
+	content: '';
+	clear: both;
+}
+
+#gd-listings-columns-2 .gd-listing {
+	padding: 0;
+}
+#gd-listings-columns-2 .gd-listing::before {
+	content: none;
+}
+
+#gd-listings-columns-2 .gd-photo {
+	position: static;
+}
+
+#gd-listings-columns-2 .gd-primary-data,
+#gd-listings-columns-2 .gd-secondary-data,
+#gd-listings-columns-2 .gd-photo {
+	padding: 0 15px;
+}
+
+#gd-listings-columns-2 .gd-photo img {
+	min-height: 172px;
+}
+
+#gd-listings-columns-2 .gd-primary-data {
+	margin-top: 15px;
+}
+
+#gd-listings-columns-2 .gd-secondary-data {
+	min-height: 8em;
+}
+/* End Layouts */
+
+/********************************************************************
+* WIDGET: FEATURED
+********************************************************************/
+.featured-row-photo,
+.listing-row-photo {
+	position:relative;
+	height: 180px;
+	overflow:hidden;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.featured-row-photoimg {
+	min-width: 100%;
+}
+
+.beds,
+.baths,
+.sqFt {
+	float:left;
+	/*background-color: #dfdfdf;*/
+	padding: 1% 2%;
+	margin-left: 2px;
+	margin-right: 10px;
+	/*border-radius: 0 5px 5px 0;*/
+	/*color: #0072bd;*/
+	min-height: 32px;
+}
+
+.beds-image,
+.baths-image { 
+	float: left;
+	/*background-color: #dfdfdf;*/
+	padding: 1% 2%;
+	/*border-radius: 5px 0 0 5px;*/
+	min-height: 32px;
+}
+
+.sqFt-image{ 
+	float: left;
+	/*background-color: #dfdfdf;*/
+	padding: 1% 2%;
+	/*border-radius: 5px 0 0 5px;*/
+	min-height: 32px;
+}
+
+.source-img img{
+	padding-top: 5px;
+	display:block;
+	opacity: 0.2;
+	filter: alpha(opacity=20); /* For IE8 and earlier */
+	width: 24px;
+}
+
+
+/********************************************************************
+* SETTINGS: GENERAL
+********************************************************************/
+#gd-city-selection {
+	height: 200px;
+	padding-left: 1em;
+	overflow-y: scroll;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+}
+
+/********************************************************************
+* SETTINGS: FEATURED
+********************************************************************/
+.gd-featured-thumb,
+.column-img {
+	width: 50px;
+}
+
+.column-address {
+	width: 15%;
+}
+
+.ui-sortable-handle {
+	cursor: pointer;
+}
+
+/********************************************************************
+* SHORTCODE: ADVANCED SEARCH
+********************************************************************/
+.gd-advanced-search input {
+/* 	display: block; */
+}
+
+.gd-advanced-search label {
+	margin-top: 10px;
+}
+
+/********************************************************************
+* GOOGLE MAP
+********************************************************************/
+.gd-map-preview img {
+	width: 100px;
+}
+
+.gd-map-preview span {
+	margin-right: 1em;
+}
+
+#gd-map #delete-button {
+	width: 14px;
+	height: 14px;
+	padding: 0;
+	top: 5px !important; /* override generated javascript inline css */
+	line-height: 14px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	border-top: 1px solid #717B87;
+	border-left: 1px solid #717B87;
+	border-right: 1px solid #717B87;
+	border-bottom: 1px solid #717B87;
+	color: red;
+	background: white;
+	text-transform: uppercase;
+	-moz-box-shadow: 0 2px 2px 1px rgba(101, 101, 101, 0.42);
+	-webkit-box-shadow: 0 2px 2px 1px rgba(101, 101, 101, 0.42);
+	box-shadow: 0 2px 2px 1px rgba(101, 101, 101, 0.42);
+	cursor: default;
+	-webkit-box-sizinz: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+#gd-map #delete-button:hover {
+	background: #eee;
+}
