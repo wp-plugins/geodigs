@@ -3,7 +3,7 @@ Contributors: NewMediaOne
 Tags: real estate, idx, agents, colorado, listings
 Requires at least: 3.5
 Tested up to: 4.2.2
-Stable Tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,3 +46,8 @@ Contact us at http://www.newmediaone.net and we can get you started!
 = 1.1 =
 * Updates to Admin area
 * New templates
+
+= 1.2 =
+* Added alerts to Account Settings page
+* Added Account Settings template
+* Fixed "Favorite" button on listing details page
