@@ -1,0 +1,235 @@
+.rg-image-wrapper{
+	position:relative;
+	margin:20px 30px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: 2px solid #e8e8e8;
+	min-height:20px;
+	max-width: 700px;
+}
+.rg-image{
+	position:relative;
+	text-align:center;
+	line-height:0px;
+	padding: 10px 0;
+}
+.rg-image img{
+	max-height:100%; 
+	max-width:100%; 
+}
+.rg-image-nav a{	
+	position:absolute;
+	top:0px;
+	z-index:10;
+	left:1%;
+	top: 45%;
+	/*background:#35c5f5 url(../images/nav.png) no-repeat -20% 50%;*/
+	background: no-repeat;
+	background-size: 28px 100%;
+	width:28px;
+	height: 10%;
+	text-indent:-9000px;
+	cursor:pointer;
+	outline:none;
+	border: none;
+	
+}
+.rg-image-nav a.rg-image-nav-next{	
+	right:1%;
+	left:auto;
+	/*background-position:115% 50%;*/
+	background-image: url(../images/ui/arrow-right.png) !important;
+	
+}
+.rg-image-nav a.rg-image-nav-prev{
+	/*background-position:115% 50%;*/
+	background-image: url(../images/ui/arrow-left.png) !important;
+}
+.rg-image-nav a:hover{
+	opacity:0.8;
+}
+
+.rg-caption-wrapper{
+	display:none;	
+}
+.rg-caption {
+	display:none;
+	text-align:center;
+	margin-top:15px;
+	position:relative;
+	
+}
+.rg-caption p{
+	font-size:11px;
+	letter-spacing:2px;
+	font-family: 'Trebuchet MS', 'Myriad Pro', Arial, sans-serif;
+	line-height:16px;
+	padding:0 15px;
+	text-transform:uppercase;
+	
+}
+.rg-view{
+	height:30px;
+	display:none
+}
+.rg-view a{
+	display:block;
+	float:right;
+	width:16px;
+	height:16px;
+	margin-right:3px;
+	background:#464646 url(../images/views.png) no-repeat top left;
+	border:3px solid #464646;
+	opacity:0.8;
+}
+.rg-view a:hover{
+	opacity:1.0;
+}
+.rg-view a.rg-view-full{
+	background-position:0px 0px;
+}
+.rg-view a.rg-view-selected{
+	background-color:#6f6f6f;
+	border-color:#6f6f6f;
+}
+.rg-view a.rg-view-thumbs{
+	background-position:0px -16px;
+}
+.rg-loading{
+	width:46px;
+	height:46px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	background:#000 url(../images/ajax-loader.gif) no-repeat center center;
+	margin:-23px 0px 0px -23px;
+	z-index:100;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	opacity:0.7;
+}
+
+
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+	.rg-image-wrapper{
+		position:relative;
+		margin:1%;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		border: 2px solid #e8e8e8;
+		min-height:20px;
+	}
+	.rg-image{
+		position:relative;
+		text-align:center;
+		line-height:0px;
+		/*background-color: green;*/
+		padding: 10px 0;
+	}
+	.rg-image img{
+		max-height:100%; 
+		max-width:100%; 
+	}
+	.rg-image-nav a{
+		position:absolute;
+		/* top:0px; */
+		z-index:9999;
+		left:2%;
+		top: 50%;
+
+		/*background:#000 url(../images/nav.png) no-repeat -20% 50%;
+		background-color: #D6DF22;*/
+		background: no-repeat;
+		background-size: 28px 100%;
+		width:28px;
+		/* margin: -20px; */
+		height: 10%;
+		text-indent:-9000px;
+		cursor:pointer;
+		opacity:0.3;
+		outline:none;
+		display:none;
+		
+		
+	}
+	.rg-image-nav a.rg-image-nav-next{
+		right:2%;
+		left:auto;
+		/*background-position:115% 50%;*/
+		background-image: url(../images/ui/arrow-right.png);
+		display:none;
+	}
+	.rg-image-nav a.rg-image-nav-prev{
+		/*background-position:115% 50%;*/
+		background-image: url(../images/ui/arrow-left.png);
+	}
+	.rg-image-nav a:hover{
+		opacity:0.8;
+	}
+
+	.rg-caption-wrapper{
+		display:none;	
+	}
+	.rg-caption {
+		display:none;
+		text-align:center;
+		margin-top:15px;
+		position:relative;
+		
+	}
+	.rg-caption p{
+		font-size:11px;
+		letter-spacing:2px;
+		font-family: 'Trebuchet MS', 'Myriad Pro', Arial, sans-serif;
+		line-height:16px;
+		padding:0 15px;
+		text-transform:uppercase;
+		
+	}
+	.rg-view{
+		height:30px;
+		display:none
+	}
+	.rg-view a{
+		display:block;
+		float:right;
+		width:16px;
+		height:16px;
+		margin-right:3px;
+		background:#464646 url(../images/views.png) no-repeat top left;
+		border:3px solid #464646;
+		opacity:0.8;
+		display:none;
+	}
+	.rg-view a:hover{
+		opacity:1.0;
+	}
+	.rg-view a.rg-view-full{
+		background-position:0px 0px;
+	}
+	.rg-view a.rg-view-selected{
+		background-color:#6f6f6f;
+		border-color:#6f6f6f;
+	}
+	.rg-view a.rg-view-thumbs{
+		background-position:0px -16px;
+	}
+	.rg-loading{
+		width:46px;
+		height:46px;
+		position:absolute;
+		top:50%;
+		left:50%;
+		background:#000 url(../images/ajax-loader.gif) no-repeat center center;
+		margin:-23px 0px 0px -23px;
+		z-index:100;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		opacity:0.7;
+	}
+	
+}
