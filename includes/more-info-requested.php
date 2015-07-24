@@ -11,14 +11,13 @@ if ($_POST) {
 	$headers .= "MIME-Version: 1.0\r\n";
 	
 	// User info
-	$name    = $_SESSION['gd_user']->name->full;
-	$email   = $_SESSION['gd_user']->email;
-	$phone   = $_SESSION['gd_user']->phone->readable;
-	$address = $_SESSION['gd_user']->address->readable;
+	$name    = sanitize_text_field($_POST['fullName']);
+	$email   = sanitize_text_field($_POST['email']);
+	$phone   = sanitize_text_field($_POST['phone']);
 	
 	// Request info
 	$listing_id      = sanitize_text_field($_POST['listingId']);
-	$listing_address = sanitize_text_field($_POST['address']);
+	$listing_address = sanitize_text_field($_POST['listingAddress']);
 	$message         = sanitize_text_field($_POST['message']);
 	
 	ob_start();

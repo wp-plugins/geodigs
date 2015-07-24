@@ -5,7 +5,6 @@
 		<strong>Name:</strong> <?=$name?><br>
 		<strong>Email:</strong> <?=$email?><br>
 		<strong>Phone:</strong> <?=$phone?><br>
-		<strong>Address:</strong> <?=$address?><br>
 
 		<h2>Listing</h2>
 		<strong>ID:</strong> <?=$listing_id?><br>

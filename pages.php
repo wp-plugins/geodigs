@@ -201,7 +201,7 @@ class Geodigs_Page_Handler {
 					break;
 				
 				case 'more-info':
-					Geodigs_User::require_login($_SERVER['REQUEST_URI']);
+					//Geodigs_User::require_login($_SERVER['REQUEST_URI']);
 				
 					ob_start();
 				
@@ -218,7 +218,7 @@ class Geodigs_Page_Handler {
 					break;
 				
 				case 'more-info-requested':
-					Geodigs_User::require_login($_SERVER['REQUEST_URI']);
+					//Geodigs_User::require_login($_SERVER['REQUEST_URI']);
 				
 					ob_start();
 				
