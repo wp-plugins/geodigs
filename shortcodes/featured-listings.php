@@ -39,6 +39,10 @@ function gd_featured_shortcode_handler() {
 			$params['officeCode'] = $our_listings['Code'];
 		}
 		
+		// This is here to tell the API to use special parameters to get random featured listings
+		// For ex: "Just Listed" listings
+		$params['featured'] = 1;
+		
 		$featureds = $gd_api->call('GET', $route, $params);
 	}
 	else {
