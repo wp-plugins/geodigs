@@ -16,10 +16,10 @@ class Geodigs_Options_Our_Listings extends Geodigs_Options {
 	function validate($input) {
 		$output	 = $input;
 		$error	 = false;
-		$sources = (array) $_SESSION['gd_agent']->sources;
+		$sources = $_SESSION['gd_agent']->sources;
 		
 		if ($input['ListingsToDisplay'] == 'agent') {
-			$mlsCode = $sources[$input['Source']]->mlsCode;
+			$mlsCode = $sources->{$input['Source']}->mlsCode;
 			if ($mlsCode) {
 				$output['Code'] = $mlsCode;
 			}
@@ -29,7 +29,7 @@ class Geodigs_Options_Our_Listings extends Geodigs_Options {
 			}
 		}
 		else if ($input['ListingsToDisplay'] == 'office') {
-			$officeCode = $sources[$input['Source']]->officeCode;
+			$officeCode = $sources->{$input['Source']}->officeCode;
 			if ($officeCode) {
 				$output['Code'] = $officeCode;
 			}
