@@ -145,12 +145,16 @@ if (GD_LOGIN_STATUS == 'success') {
 	if($_SESSION['gd_agent']->error || isset($_SESSION['gd_agent']) == false) {
 		$_SESSION['gd_agent'] = $gd_api->call('GET', 'agents/' . $login_info['AgentCode']);
 		
-		// Max Detail Views
-		$general_options = get_option(GD_OPTIONS_GENERAL);
-		$_SESSION['gd_agent']->max_detail_views = $general_options['MaxDetailViews'];
-		
-		// Switch to public key
-		$gd_api->set_key($_SESSION['gd_agent']->publicKey);
+		if ($_SESSION['gd_agent']) {
+			// Max Detail Views
+			$general_options = get_option(GD_OPTIONS_GENERAL);
+			$_SESSION['gd_agent']->max_detail_views = $general_options['MaxDetailViews'];
+
+			// Switch to public key
+			$gd_api->set_key($_SESSION['gd_agent']->publicKey);
+		} else {
+			echo 'There has been an error.  Please check back later.';
+		}
 	}
 }
 
