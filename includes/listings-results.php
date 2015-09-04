@@ -17,6 +17,12 @@
 		if (isset($general_options['ListingsLayout']) && $general_options['ListingsLayout'] != 'rows') {
 			$layout = '-' . $general_options['ListingsLayout'];
 		}
+
+		// Get pagination
+		ob_start();
+		include_once GD_DIR_INCLUDES . 'listings-pagination.php';
+		$pagination = ob_get_contents();
+		ob_end_clean();
 		
 		/** Header **/
 		
@@ -55,9 +61,11 @@
 				'show_count'       => true,
 				'sort_options'     => $sort_options,
 				'edit_search_link' => '/' . GD_URL_ADV_SEARCH . '?' . $_SERVER['QUERY_STRING'],
+				'save_search_link' => '/' . GD_URL_LISTING_ALERTS . '?' . $_SERVER['QUERY_STRING'],
 				'listings_start'   => $results->pagination->currentListings->start->readable,
 				'listings_end'     => $results->pagination->currentListings->end->readable,
 				'listings_total'   => $results->pagination->totalListings->readable,
+				'pagination'       => $pagination,
 			)
 		);
 	
@@ -130,12 +138,6 @@
 				'listing_results' => $listing_results,
 			)
 		);
-
-		// Get pagination
-		ob_start();
-		include_once GD_DIR_INCLUDES . 'listings-pagination.php';
-		$pagination = ob_get_contents();
-		ob_end_clean();
 		
 		// Load listing footer template
 		GeodigsTemplates::loadTemplate(

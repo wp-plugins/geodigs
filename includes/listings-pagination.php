@@ -8,13 +8,13 @@ if (isset($results->pagination)  && $results->pagination->totalPages->value > 1 
 	$current_listings = $pagination->currentListings;
 
 	// Open
-	echo '<div id="gd-pagination">';
+	echo '<div class="gd-pagination">';
 		echo '<span>Page:</span>';
 
 	// Previous Page
 	if ($pagination->prevPage) {
 		$url = $this_url . '?' . gd_edit_query_vars(array('listingsPage' => $pagination->prevPage->value));
-		echo '<a id="gd-pagination-prev" href="' . $url . '">Previous</a>';
+		echo '<a class="gd-pagination-prev" href="' . $url . '">Previous</a>';
 	}
 	// Page numbers
 	if ($pagination->currentPage && $pagination->totalPages && $pagination->totalPages->value > 1) {
@@ -48,7 +48,7 @@ if (isset($results->pagination)  && $results->pagination->totalPages->value > 1 
 	// Next Page
 	if ($pagination->nextPage) {
 		$url = $this_url . '?' . gd_edit_query_vars(array('listingsPage' => $pagination->nextPage->value));
-		echo '<a id="gd-pagination-next" href="' . $url . '">Next</a>';
+		echo '<a class="gd-pagination-next" href="' . $url . '">Next</a>';
 	}
 
 	// Close

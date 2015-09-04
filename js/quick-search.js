@@ -1,28 +1,10 @@
 (function($){
-	$.ui.autocomplete.prototype.options.autoSelect = true;
-	$(".ui-autocomplete-input").live("blur", function(event) {
-
-		var autocomplete = $(this).data("uiAutocomplete");
-		if (!autocomplete.options.autoSelect || autocomplete.selectedItem) {
-			return;
-		}
-
-		autocomplete.widget().children(".ui-menu-item:first").each(function() {
-			var item = $(this).data("uiAutocompleteItem");
-			autocomplete.selectedItem = item;
-		});
-		if (autocomplete.selectedItem) {
-			$(".ui-autocomplete-input").val(autocomplete.selectedItem.label);
-			autocomplete._trigger("select", event, { item: autocomplete.selectedItem });
-		}
-	});
-
 	$(document).ready(function(){
 
 		// $items = [];
 		var autocompleteCache;
 
-		$(".gd-quick-search-selector").autocomplete({
+		$( ".gd-quick-search-selector" ).autocomplete({
 			minLength: 2,
 			delay: 0,
 			autoFocus: true,
@@ -45,11 +27,13 @@
 					url:"http://api.geodigs.com/v1/listings/autocomplete",
 					dataType: 'json',
 					data: {
-						search: request.term
+						search: request.term,
+						sources: $('#gd-quick-search-sources').val().split(',')
 					},
 					success: function(data){
 						var myResults = [];
 						var index = 0;
+						console.log(data);
 						response($.map(data, function (item) {
 
 							$.each(item, function(key, val)
@@ -91,4 +75,4 @@
 			//$('#gd-quick-search-form').submit();
 		}
 	});
-}(jQuery));
+}(jQuery))

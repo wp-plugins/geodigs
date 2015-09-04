@@ -28,8 +28,9 @@ function gd_get_search_param($param) {
 	
 	if (isset($gd_search_params[$param])) {
 		return esc_attr($gd_search_params[$param]);
-	}
-	else {
+	} elseif (isset($_GET[$param])) {
+		return esc_attr($_GET[$param]);
+	} else {
 		return '';
 	}
 }
