@@ -81,7 +81,7 @@
 			<label>Middle School</label>
 			<input class="form-control" type="text" name="schoolMiddle" value="<?=gd_get_search_param('schoolMiddle')?>">
 			<!-- High School -->
-			<label>Hight School</label>
+			<label>High School</label>
 			<input class="form-control" type="text" name="schoolHigh" value="<?=gd_get_search_param('schoolHigh')?>">
 		</div>
 	</div>

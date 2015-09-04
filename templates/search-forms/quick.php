@@ -5,6 +5,8 @@
 <!-- 		Order by price high to low first -->
 		<input type="hidden" name="orderBy" value="price">
 		<input type="hidden" name="orderByDirection" value="desc">
+<!-- 		Only for this agent's source/s -->
+		<input type="hidden" id="gd-quick-search-sources" name="sources" value="<?=$sources?>">
 		
 		<div class="gd-quick-search-input form-group">
 			<input class="gd-quick-search-selector form-control" type="text" placeholder="Search... Type a city, street name, zip code, or MLS #"></input>

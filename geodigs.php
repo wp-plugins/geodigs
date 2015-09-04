@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: GeoDigs
- * Version: 1.3.1
+ * Version: 1.4.2
  * Author: New Media One
  * Author URI: www.newmediaone.net
  * License: GPL2

@@ -3,7 +3,7 @@ Contributors: NewMediaOne
 Tags: real estate, idx, agents, colorado, listings
 Requires at least: 3.5
 Tested up to: 4.2.2
-Stable tag: 1.3.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,3 +54,11 @@ Contact us at http://www.newmediaone.net and we can get you started!
 
 = 1.3.1 =
 * Changed the way “More Info” requests are made
+
+= 1.4.1 =
+* Quick Search autocomplete now auto-selects the first option
+* Added a “Save Search as Listing Alert” button to listing results page
+* Misc. style changes
+
+= 1.4.2 =
+* Fixed bug with Quick Search autocomplete

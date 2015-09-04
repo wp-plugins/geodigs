@@ -27,11 +27,13 @@
 					url:"http://api.geodigs.com/v1/listings/autocomplete",
 					dataType: 'json',
 					data: {
-						search: request.term
+						search: request.term,
+						sources: $('#gd-quick-search-sources').val().split(',')
 					},
 					success: function(data){
 						var myResults = [];
 						var index = 0;
+						console.log(data);
 						response($.map(data, function (item) {
 
 							$.each(item, function(key, val)
