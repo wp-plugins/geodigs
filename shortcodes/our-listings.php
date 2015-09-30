@@ -9,12 +9,13 @@ function gd_our_listings_shortcode_handler() {
 	if($our_listings) {
 		$route  = 'listings';
 		$params = array();
+		$source = $_SESSION['gd_agent']->sources->{$our_listings['Source']};
 
 		if ($our_listings['ListingsToDisplay'] == 'agent') {
-			$params['agentCode'] = $our_listings['Code'];
+			$params['agentCode'] = $source->mlsCode;
 		}
 		elseif ($our_listings['ListingsToDisplay'] == 'office') {
-			$params['officeCode'] = $our_listings['Code'];
+			$params['officeCode'] = $source->officeCode;
 		}
 		
 		// Get type

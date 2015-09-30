@@ -75,4 +75,4 @@
 			//$('#gd-quick-search-form').submit();
 		}
 	});
-}(jQuery))
+}(jQuery));
