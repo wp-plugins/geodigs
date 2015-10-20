@@ -26,6 +26,7 @@ class gd_admin {
 		add_submenu_page(GD_ADMIN_PAGE_GENERAL, 'GeoDigs Document Store', 'Document Store', 'manage_options', GD_ADMIN_PAGE_DOCUMENT_STORE, array('gd_admin', 'create_document_store_options_page'));
 		add_submenu_page(GD_ADMIN_PAGE_GENERAL, 'GeoDigs Featured Listings', 'Featured Listings', 'manage_options', GD_ADMIN_PAGE_FEATURED_LISTINGS, array('gd_admin', 'create_featured_listings_options_page'));
 		add_submenu_page(GD_ADMIN_PAGE_GENERAL, 'GeoDigs Users', 'Users', 'manage_options', GD_ADMIN_PAGE_USERS, array('gd_admin', 'create_user_options_page'));
+		add_submenu_page(GD_ADMIN_PAGE_GENERAL, 'GeoDigs Domains', 'Domains', 'manage_options', GD_ADMIN_PAGE_DOMAINS, array('gd_admin', 'create_domain_options_page'));
 	}
 
 	public static function register_settings() {
@@ -189,6 +190,13 @@ class gd_admin {
 		<div class="wrap">
 			<h2>Users</h2>
 			<?php require_once GD_DIR_ADMIN_INCLUDES . 'users.php'; ?>
+		</div>
+	<?php }
+
+	public static function create_domain_options_page() { ?>
+		<div class="wrap">
+			<h2>Domains</h2>
+			<?php require_once GD_DIR_ADMIN_TEMPLATES . '/new-domain.php'; ?>
 		</div>
 	<?php }
 }

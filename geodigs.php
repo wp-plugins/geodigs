@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: GeoDigs
- * Version: 1.4.2
+ * Version: 1.5.0
  * Author: New Media One
  * Author URI: www.newmediaone.net
  * License: GPL2
@@ -91,6 +91,7 @@ else {
 // Admin Settings
 define('GD_ADMIN_PAGE_CALENDARS', 'geodigs-calendars');
 define('GD_ADMIN_PAGE_DOCUMENT_STORE', 'geodigs-document-store');
+define('GD_ADMIN_PAGE_DOMAINS', 'geodigs-domains');
 define('GD_ADMIN_PAGE_FEATURED_LISTINGS', 'geodigs-featured-listings');
 define('GD_ADMIN_PAGE_GENERAL', 'geodigs-general');
 define('GD_ADMIN_PAGE_USERS', 'geodigs-users');
@@ -169,6 +170,7 @@ $gd_directory = file_exists(dirname( __FILE__ ) . '/geodigs.php') ? dirname( __F
 define('GD_DIR', $gd_directory);
 define('GD_DIR_ADMIN', GD_DIR . 'admin/');
 define('GD_DIR_ADMIN_INCLUDES', GD_DIR_ADMIN . 'includes/');
+define('GD_DIR_ADMIN_TEMPLATES', GD_DIR_ADMIN . 'templates/');
 define('GD_DIR_CSS', GD_DIR . 'css/');
 define('GD_DIR_DOCUMENT_STORE', $_SERVER['DOCUMENT_ROOT'] . '/document-store/');
 define('GD_DIR_EMAILS', GD_DIR . 'emails/');

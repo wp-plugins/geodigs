@@ -2,8 +2,8 @@
 Contributors: NewMediaOne
 Tags: real estate, idx, agents, colorado, listings
 Requires at least: 3.5
-Tested up to: 4.2.2
-Stable tag: 1.4.2
+Tested up to: 4.3.1
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,3 +62,7 @@ Contact us at http://www.newmediaone.net and we can get you started!
 
 = 1.4.2 =
 * Fixed bug with Quick Search autocomplete
+
+= 1.5.0 =
+* Added request custom domain feature
+* Bug fixes

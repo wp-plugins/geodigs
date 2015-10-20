@@ -11,6 +11,7 @@ function gd_featured_shortcode_handler() {
 		
 		// Do the listings belong to the agent or the office?
 		$our_listings = get_option(GD_OPTIONS_OUR_LISTINGS);
+		$source = $_SESSION['gd_agent']->sources->{$our_listings['Source']};
 
 		// Get sort order
 		if ($featured_options['Sort'] == 'random') {
@@ -33,10 +34,10 @@ function gd_featured_shortcode_handler() {
 		$params['status'] = 2;
 
 		if ($our_listings['ListingsToDisplay'] == 'agent') {
-			$params['agentCode'] = $our_listings['Code'];
+			$params['agentCode'] = $source->mlsCode;
 		}
 		elseif ($our_listings['ListingsToDisplay'] == 'office') {
-			$params['officeCode'] = $our_listings['Code'];
+			$params['officeCode'] = $source->officeCode;
 		}
 		
 		// This is here to tell the API to use special parameters to get random featured listings
